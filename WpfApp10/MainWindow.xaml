@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reflector" Height="350" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Reflector" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" />
+
+        <!-- Имя класса -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <Label Content="Имя класса:" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtClassName" Width="250" Margin="5"/>
+        </StackPanel>
+
+        <!-- Путь к файлу -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,5">
+            <Label Content="Путь к файлу:" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtOutputPath" Width="250" Margin="5"/>
+            <Button Content="Обзор..." Margin="5" Click="btnBrowse_Click"/>
+        </StackPanel>
+
+        <!-- Кнопка "Запустить рефлектор" -->
+        <Button x:Name="btnRunReflector" Grid.Row="3" Content="Запустить рефлектор" Margin="0,10" Click="btnRunReflector_Click"/>
+
+        <!-- Сообщение о результате -->
+        <TextBlock x:Name="txtResultMessage" Grid.Row="4" TextWrapping="Wrap" Margin="0,10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
